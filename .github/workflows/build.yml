@@ -46,7 +46,8 @@ jobs:
         run: docker pull nithiyarasan/swiggy-clone:latest
         
       - name: Image scan
-        run: trivy image nithiyarasan/swiggy-clone:latest > trivyimagedeploy.txt
+        run: | 
+          trivy image nithiyarasan/swiggy-clone:latest > trivyimagedeploy.txt
         
       - name: Deploy to container
         run: docker run -d --name swiggy-clone -p 3000:3000 nithiyarasan/swiggy-clone:latest
