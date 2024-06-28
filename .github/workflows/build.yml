@@ -36,10 +36,11 @@ jobs:
           docker push nithiyarasan/swiggy-clone:latest
         env:
           DOCKER_CLI_ACI: 1
+
 deploy:
-  needs: build
-  runs-on: ubuntu-latest
-    steps:
+   needs: build
+   runs-on: ubuntu-latest
+   steps:
       - name: docker pull image
         run: docker pull nithiyarasan/swiggy-clone:latest
       - name: Image scan
