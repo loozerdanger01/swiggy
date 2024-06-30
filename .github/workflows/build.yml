@@ -59,3 +59,4 @@ jobs:
         
       - name: Deploy to container
         run: docker run -d --name swiggy-clone -p 3000:3000 nithiyarasan/swiggy-clone:latest
+
